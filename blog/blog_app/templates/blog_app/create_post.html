@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница хуеты
+{% endblock %}
+
+{% block content%}
+<div class="container">
+    <form action="" method='post' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <input type="file" multiple
+               name="gallery" id="gallery" class="form-control mb-3">
+        <button class="btn btn-dark">отправить РАКЕТЫ НА США</button>
+    </form>
+</div>
+{% endblock %}
